@@ -11,6 +11,7 @@ testsh() {
 		if command -v "${i%% *}" >/dev/null
 		then
 			printf "%-18s" "Testing ${i%% *}..."
+			job=
 
 			for j in fg bg table
 			do
@@ -21,13 +22,14 @@ testsh() {
 					e=$red
 				fi
 
-				printf "${e}%s${reset} " "$j"
+				job="${job}${e}${j}${reset} "
 			done
+
+			printf '%b' "${job}"
 		else
-			printf '%-18s' "Testing ${i%% *}... "
+			printf %-18s "Testing ${i%% *}... "
 			printf "%b" "${yellow}miss${reset}"
 		fi
-
 		printf '\n'
 	done
 }
