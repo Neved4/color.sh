@@ -1,7 +1,9 @@
 ![Shell Script](https://img.shields.io/badge/Shell_Script-9DDE66?logo=gnubash&logoColor=000&style=for-the-badge)
 [![POSIX.1%2D2017](https://img.shields.io/badge/POSIX.1&#8209;2017-6A737D?labelColor=6A737D&style=for-the-badge)](https://www.google.com)
 
-# `color.sh` - terminal color tests in POSIX sh
+# `color.sh` - terminal color tests for POSIX shells
+
+##### Original by [Daniel Crisman].
 
 ![](graphics/color-sh.png)
 
@@ -27,22 +29,25 @@
 
 ## Benchmarks
 
-See [Benchmarks](doc/Benchmark.md).
+Note that while [`scolor.sh`] provides a more elegant implementation,
+[`color.sh`] more effectively demonstrates the performance of every shell.
+See [Benchmarks](doc/Benchmark.md).[^2]
 
 ## License
 
-##### Original by [Daniel Crisman].
-
-`grok.sh` is licensed under the terms of the MIT License.
-
+This repository is licensed under the terms of the MIT License.
+   
 See the [LICENSE](LICENSE) file for details.
 
 [^1]: To accomodate `posh`, parameter substitution had to be used. \
-See: [What does `${1+"$@"}` mean | Sven Mascheck](https://www.in-ulm.de/~mascheck/various/bourne_args/).
+      See: [What does `${1+"$@"}` mean | Sven Mascheck].
+[^2]: Note that `pdksh` derived shells, such as `mksh`, `oksh` or `poskh`, 
+      have a higher [fork-exec] penalty \
+      when using `/usr/bin/printf`, 
+      compared to the [Korn shell] built-in `print`. \
+      Targeted code was introduced to precisely assess performance.
 
 [`agg`]: https://github.com/asciinema/agg
-[`kanagawa.nvim`]: https://github.com/rebelot/kanagawa.nvim
-[Daniel Crisman]: https://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html
 [`bash`]: https://git.savannah.gnu.org/cgit/bash.git/
 [`dash`]: https://git.kernel.org/pub/scm/utils/dash/dash.git
 [`ksh93`]: https://github.com/ksh93/ksh
@@ -56,3 +61,14 @@ See: [What does `${1+"$@"}` mean | Sven Mascheck](https://www.in-ulm.de/~maschec
 [`nsh`]: https://github.com/nuta/nsh
 [`nu`]: https://github.com/nushell/nushell
 [`tcsh`]: https://github.com/freebsd/freebsd-src/tree/main/bin/csh
+[`kanagawa.nvim`]: https://github.com/rebelot/kanagawa.nvim
+[Daniel Crisman]: https://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html
+[fork-exec]: https://en.wikipedia.org/wiki/Fork%E2%80%93exec
+[Korn shell]: https://web.archive.org/web/20151025145158/http://www2.research.att.com/sw/download/man/man1/ksh.html
+[`scolor.sh`]: src/scolor.sh
+[`color.sh`]: src/color.sh
+[What does `${1+"$@"}` mean | Sven Mascheck]: https://www.in-ulm.de/~mascheck/various/bourne_args/
+
+## Acknowledgments
+
+Special thanks to [@mirabilos](https://github.com/mirabilos) for the many suggestions, corrections and feedback.

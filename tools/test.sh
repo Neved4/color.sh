@@ -2,7 +2,9 @@
 set -Cefu
 
 reset='\033[0m'
-red='\033[31m' green='\033[32m' yellow='\033[33m'
+red='\033[31m'
+green='\033[32m'
+yellow='\033[33m'
 
 testsh() {
 	for i in bash dash ksh mksh oksh posh sh 'zsh -i' yash \
