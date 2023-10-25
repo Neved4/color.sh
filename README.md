@@ -23,11 +23,13 @@
 |   [`yash`] | `2.55`        | Yes       |
 |    [`zsh`] | `5.9`         | Yes       |
 | [`elvish`] | `0.19.2`      | No        |
+|   [`etsh`] | `5.4.0`       | No        |
 |   [`fish`] | `3.6.1`       | No        |
 |   [`tcsh`] | `6.21.00`     | No        |
 |    [`nsh`] | `0.4.2`       | No        |
 |     [`nu`] | `0.85.05`     | No        |
 |    [`ysh`] | `0.18.0`      | No        |
+|  [`xonsh`] | `0.14.1`      | No        |
 
 ## Benchmarks
 
@@ -40,6 +42,10 @@ See [Benchmarks](doc/Benchmark.md).[^2]
 This repository is licensed under the terms of the MIT License.
    
 See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+Special thanks to [@mirabilos](https://github.com/mirabilos) for the many suggestions, corrections and feedback.
 
 [^1]: To accomodate `posh`, parameter substitution had to be used. \
       See: [What does `${1+"$@"}` mean | Sven Mascheck].
@@ -60,11 +66,14 @@ See the [LICENSE](LICENSE) file for details.
 [`yash`]: https://github.com/magicant/yash
 [`zsh`]: https://github.com/zsh-users/zsh
 [`elvish`]: https://github.com/elves/elvish
+[`etsh`]: https://etsh.nl/
 [`fish`]: https://github.com/fish-shell/fish-shell
 [`nsh`]: https://github.com/nuta/nsh
 [`nu`]: https://github.com/nushell/nushell
 [`tcsh`]: https://github.com/freebsd/freebsd-src/tree/main/bin/csh
 [`ysh`]: https://www.oilshell.org/cross-ref.html?tag=YSH#YSH
+[`xonsh`]: https://xon.sh/
+
 [`kanagawa.nvim`]: https://github.com/rebelot/kanagawa.nvim
 [Daniel Crisman]: https://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html
 [fork-exec]: https://en.wikipedia.org/wiki/Fork%E2%80%93exec
@@ -72,7 +81,3 @@ See the [LICENSE](LICENSE) file for details.
 [`scolor.sh`]: src/scolor.sh
 [`color.sh`]: src/color.sh
 [What does `${1+"$@"}` mean | Sven Mascheck]: https://www.in-ulm.de/~mascheck/various/bourne_args/
-
-## Acknowledgments
-
-Special thanks to [@mirabilos](https://github.com/mirabilos) for the many suggestions, corrections and feedback.

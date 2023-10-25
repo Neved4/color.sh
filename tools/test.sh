@@ -8,7 +8,7 @@ yellow='\033[33m'
 
 testsh() {
 	for i in bash dash ksh mksh osh oksh posh sh 'zsh -i' yash \
-		tcsh elvish nsh nu ysh
+		tcsh elvish nsh nu ysh xonsh
 	do
 		if command -v "${i%% *}" >/dev/null
 		then
