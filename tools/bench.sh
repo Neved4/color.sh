@@ -24,14 +24,14 @@ bench() {
 
 	bench=$(hf | grep -v Warning | sed -e 's:\./src/::g')
 
-	{
+	print_tty() {
 		printf '%b\n' "${under}${cyan}$bin benchmarks${reset}" ''
 		printf '%s\n' "$bench"          |
 			sed -n '/Benchmark /,/^$/p' |
 				sed -n '/Summary/,/^$/p'
 	} >> /dev/tty
 
-	{
+	fmt_bench() {
 		printf '%s\n\n%s %s%b\n' "## \`$bin\` benchmarks" \
 			'Commands are run as:' "\`<shell> -c $bin <cmd>\`" '\n'
 		printf '%s\n' "$bench" |
@@ -44,6 +44,9 @@ bench() {
 			}' |
 			deno fmt --ext md -
 	}
+
+	print_tty
+	fmt_bench
 }
 
 {
