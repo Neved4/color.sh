@@ -14,7 +14,7 @@ bench() {
 	hf() {
 		set -- -w"$warm" -r"$rep" -S none --style full \
 			--sort mean-time --export-markdown - \
-			-L shell bash,dash,ksh93,mksh,oksh,posh,yash,'zsh -i'
+			-L shell bash,dash,ksh93,mksh,osh,oksh,posh,yash,'zsh -i'
 
 		for subcmd in bg fg table
 		do

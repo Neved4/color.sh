@@ -18,14 +18,16 @@
 |  [`ksh93`] | `93u+m/1.0.7` | Yes       |
 |   [`mksh`] | `59c`         | Yes       |
 |   [`oksh`] | `7.3`         | Yes       |
+|    [`osh`] | `0.18.0`      | Yes       |
 |   [`posh`] | `0.14.1`      | Yes[^1]   |
 |   [`yash`] | `2.55`        | Yes       |
 |    [`zsh`] | `5.9`         | Yes       |
 | [`elvish`] | `0.19.2`      | No        |
 |   [`fish`] | `3.6.1`       | No        |
+|   [`tcsh`] | `6.21.00`     | No        |
 |    [`nsh`] | `0.4.2`       | No        |
 |     [`nu`] | `0.85.05`     | No        |
-|   [`tcsh`] | `6.21.00`     | No        |
+|    [`ysh`] | `0.18.0`      | No        |
 
 ## Benchmarks
 
@@ -52,6 +54,7 @@ See the [LICENSE](LICENSE) file for details.
 [`dash`]: https://git.kernel.org/pub/scm/utils/dash/dash.git
 [`ksh93`]: https://github.com/ksh93/ksh
 [`mksh`]: https://github.com/MirBSD/mksh
+[`osh`]: https://www.oilshell.org/cross-ref.html?tag=OSH#OSH
 [`oksh`]: https://github.com/ibara/oksh
 [`posh`]: https://salsa.debian.org/clint/posh
 [`yash`]: https://github.com/magicant/yash
@@ -61,6 +64,7 @@ See the [LICENSE](LICENSE) file for details.
 [`nsh`]: https://github.com/nuta/nsh
 [`nu`]: https://github.com/nushell/nushell
 [`tcsh`]: https://github.com/freebsd/freebsd-src/tree/main/bin/csh
+[`ysh`]: https://www.oilshell.org/cross-ref.html?tag=YSH#YSH
 [`kanagawa.nvim`]: https://github.com/rebelot/kanagawa.nvim
 [Daniel Crisman]: https://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html
 [fork-exec]: https://en.wikipedia.org/wiki/Fork%E2%80%93exec
