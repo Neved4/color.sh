@@ -1,5 +1,5 @@
 ![Shell Script](https://img.shields.io/badge/Shell_Script-9DDE66?logo=gnubash&logoColor=000&style=for-the-badge)
-[![POSIX.1%2D2017](https://img.shields.io/badge/POSIX.1&#8209;2017-6A737D?labelColor=6A737D&style=for-the-badge)](https://www.google.com)
+[![POSIX.1%2D2017](https://img.shields.io/badge/POSIX.1&#8209;2017-6A737D?labelColor=6A737D&style=for-the-badge)][POSIX.1-2017]
 
 # `color.sh` - terminal color tests for POSIX shells
 
@@ -9,7 +9,26 @@
 
 ###### Generated using [`agg`], colors by [`kanagawa.nvim`].
 
-### Supported shells
+## Getting Started
+
+### Prerequisites
+
+- A [POSIX.1-2017] compliant shell, or any of the ones listed in [Supported shells](#supported-shells).
+
+### Installation
+
+Paste in a macOS Terminal or Linux shell prompt:
+```sh
+/bin/sh -c "$(curl -fsSL https://github.com/Neved4/colort.sh/tree/master/install.sh"
+```
+
+### Usage
+
+```color.sh [bg | fg | table]```
+
+### Portability
+
+#### Supported shells
 
 |      Shell | Version       | Supported |
 | ---------: | :------------ | :-------- |
@@ -37,9 +56,13 @@ Note that while [`scolor.sh`] provides a more elegant implementation,
 [`color.sh`] more effectively demonstrates the performance of every shell.
 See [Benchmarks](doc/Benchmark.md).[^2]
 
+## Standards
+
+This script conforms to [ISO 9945:2009][POSIX.1-2017], also known as [POSIX.1-2017].[^3]
+
 ## License
 
-This repository is licensed under the terms of the MIT License.
+This repository is licensed under the terms of the [MIT License].
    
 See the [LICENSE](LICENSE) file for details.
 
@@ -54,8 +77,20 @@ Special thanks to [@mirabilos](https://github.com/mirabilos) for the many sugges
       when using `/usr/bin/printf`, 
       compared to the [Korn shell] built-in `print`. \
       Targeted code was introduced to precisely assess performance.
+[^3]: _IEEE Std 1003.1-2017: Standard for Information Technology — Portable Operating System Interface (POSIX®)_, \
+      ISO/IEC/IEEE 9945:2009/COR 2:2017. URL: https://pubs.opengroup.org/onlinepubs/9699919799/
 
 [`agg`]: https://github.com/asciinema/agg
+[`color.sh`]: src/color.sh
+[`kanagawa.nvim`]: https://github.com/rebelot/kanagawa.nvim
+[`scolor.sh`]: src/scolor.sh
+[Daniel Crisman]: https://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html
+[fork-exec]: https://en.wikipedia.org/wiki/Fork%E2%80%93exec
+[Korn shell]: https://web.archive.org/web/20151025145158/http://www2.research.att.com/sw/download/man/man1/ksh.html
+[MIT License]: https://opensource.org/license/mit/
+[POSIX.1-2017]: https://pubs.opengroup.org/onlinepubs/9699919799/
+[What does `${1+"$@"}` mean | Sven Mascheck]: https://www.in-ulm.de/~mascheck/various/bourne_args/
+
 [`bash`]: https://git.savannah.gnu.org/cgit/bash.git/
 [`dash`]: https://git.kernel.org/pub/scm/utils/dash/dash.git
 [`ksh93`]: https://github.com/ksh93/ksh
@@ -73,11 +108,3 @@ Special thanks to [@mirabilos](https://github.com/mirabilos) for the many sugges
 [`tcsh`]: https://github.com/freebsd/freebsd-src/tree/main/bin/csh
 [`ysh`]: https://www.oilshell.org/cross-ref.html?tag=YSH#YSH
 [`xonsh`]: https://xon.sh/
-
-[`kanagawa.nvim`]: https://github.com/rebelot/kanagawa.nvim
-[Daniel Crisman]: https://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html
-[fork-exec]: https://en.wikipedia.org/wiki/Fork%E2%80%93exec
-[Korn shell]: https://web.archive.org/web/20151025145158/http://www2.research.att.com/sw/download/man/man1/ksh.html
-[`scolor.sh`]: src/scolor.sh
-[`color.sh`]: src/color.sh
-[What does `${1+"$@"}` mean | Sven Mascheck]: https://www.in-ulm.de/~mascheck/various/bourne_args/
