@@ -1,6 +1,18 @@
 ## `color.sh` benchmarks
 
-Commands are run as: `<shell> -c color.sh <cmd>`
+Commands are run as: `<shell> -c color.sh <cmd>`:
+
+#### Setup
+
+|     Type | Component          |
+| -------: | :----------------- |
+|   System | `macOS 14.1`       |
+|     Arch | `arm64`            |
+|    Model | `MacBook Pro 17,1` |
+|      CPU | `Apple M1`         |
+| Terminal | `Alacritty`        |
+
+[`alacritty`]: https://github.com/alacritty/alacritty
 
 #### `color.sh bg`
 
