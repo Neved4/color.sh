@@ -68,7 +68,8 @@ See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
-Special thanks to [@mirabilos](https://github.com/mirabilos) for the many suggestions, corrections and feedback.
+Special thanks to [@mirabilos](https://github.com/mirabilos) for the many
+suggestions, corrections and feedback.
 
 [^1]: To accomodate `posh`, parameter substitution had to be used. \
       See: [What does `${1+"$@"}` mean | Sven Mascheck].
@@ -77,8 +78,10 @@ Special thanks to [@mirabilos](https://github.com/mirabilos) for the many sugges
       when using `/usr/bin/printf`, 
       compared to the [Korn shell] built-in `print`. \
       Targeted code was introduced to precisely assess performance.
-[^3]: _IEEE Std 1003.1-2017: Standard for Information Technology — Portable Operating System Interface (POSIX®)_, \
-      ISO/IEC/IEEE 9945:2009/COR 2:2017. URL: https://pubs.opengroup.org/onlinepubs/9699919799/
+[^3]: _IEEE Std 1003.1-2017: Standard for Information Technology — Portable
+      Operating System Interface (POSIX®)_, \
+      ISO/IEC/IEEE 9945:2009/COR 2:2017. URL:
+      https://pubs.opengroup.org/onlinepubs/9699919799/
 
 [`agg`]: https://github.com/asciinema/agg
 [`color.sh`]: src/color.sh
