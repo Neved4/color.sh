@@ -1,37 +1,34 @@
 #!/bin/sh
 set -Cefu
 
-reset='\033[0m'
-red='\033[31m'
-green='\033[32m'
+ reset='\033[0m'
+   red='\033[31m'
+ green='\033[32m'
 yellow='\033[33m'
 
 testsh() {
 	for i in bash dash ksh mksh osh oksh posh sh 'zsh -i' yash \
 		tcsh elvish nsh nu ysh xonsh
 	do
+		printf %-18s "Testing ${i%% *}..."
 		if command -v "${i%% *}" >/dev/null
 		then
-			printf "%-18s" "Testing ${i%% *}..."
 			job=
-
 			for j in fg bg table
 			do
 				if $i "src/color.sh" "$j" >/dev/null 2>&1
 				then
-					e=$green
+					esc=$green
 				else
-					e=$red
+					esc=$red
 				fi
 
-				job="${job}${e}${j}${reset} "
+				job="${job}${esc}${j}${reset} "
 			done
-
-			printf '%b' "${job}"
 		else
-			printf %-18s "Testing ${i%% *}... "
-			printf "%b" "${yellow}miss${reset}"
+			job="${yellow}missing${reset}"
 		fi
+		printf %b "$job"
 		printf '\n'
 	done
 }
