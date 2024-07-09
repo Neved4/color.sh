@@ -1,7 +1,7 @@
-![Shell Script](https://img.shields.io/badge/Shell_Script-9DDE66?logo=gnubash&logoColor=000&style=for-the-badge)
-[![POSIX.1%2D2017](https://img.shields.io/badge/POSIX.1&#8209;2017-6A737D?labelColor=6A737D&style=for-the-badge)][POSIX.1-2017]
+![Shell Script](https://img.shields.io/badge/Shell_Script-9DDE66?logo=gnubash&logoColor=000&style=flat)
+![POSIX.1%2D2017](https://img.shields.io/badge/POSIX.1&#8209;2017-00629B?logo=ieee&logoColor=fff&style=flat)
 
-# `color.sh` - terminal color tests for POSIX shells
+# `color.sh` - Test terminal colors with POSIX shells
 
 ##### Original by [Daniel Crisman].
 
@@ -13,13 +13,14 @@
 
 ### Prerequisites
 
-- A [POSIX.1-2017] compliant shell, or any of the ones listed in [Supported shells](#supported-shells).
+- A [POSIX.1-2017] compliant shell, or any of the ones listed
+  in [Supported shells](#supported-shells).
 
 ### Installation
 
 Paste in a macOS Terminal or Linux shell prompt:
 ```sh
-/bin/sh -c "$(curl -fsSL https://github.com/Neved4/colort.sh/tree/master/install.sh"
+/bin/sh -c "$(curl -fsSL https://github.com/Neved4/color.sh/tree/master/install.sh"
 ```
 
 ### Usage
@@ -58,7 +59,8 @@ See [Benchmarks](doc/Benchmark.md).[^2]
 
 ## Standards
 
-This script conforms to [ISO 9945:2009][POSIX.1-2017], also known as [POSIX.1-2017].[^3]
+This script conforms to [ISO 9945:2009][POSIX.1-2017], also known as
+[POSIX.1-2017].[^3]
 
 ## License
 
@@ -71,17 +73,15 @@ See the [LICENSE](LICENSE) file for details.
 Special thanks to [@mirabilos](https://github.com/mirabilos) for the many
 suggestions, corrections and feedback.
 
-[^1]: To accomodate `posh`, parameter substitution had to be used. \
+[^1]: To accomodate `posh`, parameter substitution had to be used.
       See: [What does `${1+"$@"}` mean | Sven Mascheck].
-[^2]: Note that `pdksh` derived shells, such as `mksh`, `oksh` or `poskh`, 
-      have a higher [fork-exec] penalty \
-      when using `/usr/bin/printf`, 
-      compared to the [Korn shell] built-in `print`. \
-      Targeted code was introduced to precisely assess performance.
-[^3]: _IEEE Std 1003.1-2017: Standard for Information Technology — Portable
-      Operating System Interface (POSIX®)_, \
-      ISO/IEC/IEEE 9945:2009/COR 2:2017. URL:
-      https://pubs.opengroup.org/onlinepubs/9699919799/
+[^2]: Note that `pdksh` derived shells, such as `mksh`, `oksh` or `poskh`,
+      have a higher [fork-exec] penalty when using `/usr/bin/printf`,
+      compared to the [Korn shell] built-in `print`. Targeted code was
+      introduced to precisely assess performance.
+[^3]: _IEEE Std 1003.1-2017: Standard for Information Technology — Portable_
+      _Operating System Interface (POSIX®)_, ISO/IEC/IEEE 9945:2009/COR
+      2:2017. URL: https://pubs.opengroup.org/onlinepubs/9699919799/
 
 [`agg`]: https://github.com/asciinema/agg
 [`color.sh`]: src/color.sh
